@@ -1,0 +1,22 @@
+names=["A","B","C","D","E","F","G","H","I","J"]
+memo=[0,1,1,1,2,2,1,2,1,2]
+salary=[1000, 2000, 3000, 4500, 2000, 5000, 1500, 2300, 1300, 1100]
+
+
+employees=list(zip(names,memo,salary))
+
+fired_enployees_1=[employee for employee in employees if employee[2]>=4000]
+employees=[employee for employee in employees if employee[2]<4000]
+
+employees.sort(key=lambda x:x[2], reverse=True)
+
+fired_enployees_2=[employee for employee in employees if employee[1]>=2]
+employees=[employee for employee in employees if employee[1]<2]
+
+#print("Employees fired due to high salary")
+for employee in fired_enployees_1:
+    print(employee[0],"--->  salary > $4000")
+
+#print("Employees fired because they have received more than 2 memo(s)")
+for employee in fired_enployees_2:
+    print(employee[0],"--->  memos > 1")
