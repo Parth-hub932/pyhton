@@ -1,0 +1,11 @@
+a="aaabbbcccccaa"
+c=1
+res=""
+
+for i in range(len(a)):
+    if i+1<len(a) and a[i]==a[i+1] :
+        c+=1
+    else:
+        res=a[i]+str(c)
+        print(res,end="")
+        c=1
