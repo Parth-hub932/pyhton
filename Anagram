@@ -1,0 +1,15 @@
+str1=input("Enter string 1")
+str2=input("Enter string 2")
+lower_str1=str1.lower()
+lower_str2=str2.lower()
+
+a1="".join(i for i in lower_str1 if i!=" ")
+b1="".join(i for i in lower_str2 if i!=" ")
+
+sorted_a1=sorted(a1)
+sorted_b1=sorted(b1)
+
+if(sorted_b1==sorted_a1):
+    print("its an anagram")
+else:
+    print("its not an anagram")
