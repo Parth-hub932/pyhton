@@ -1,0 +1,27 @@
+boy=input("enter a boy name")
+girl=input("Enter a girls name")
+
+a1=list(boy)
+a2=list(girl)
+
+for i in range(len(a1)):
+    for j in range(len(a2)):
+        if a1[i]==a2[j]:
+            a1[i]="/"
+            a2[j]="/"
+for i in a1:
+    if i=="/":
+        a1.remove(i)
+
+for i in a2:
+    if i=="/":
+        a2.remove(i)
+sum=len(a1)+len(a2)
+
+i=sum-1
+
+while c<6:
+    word=["f","l","a","m","e","s"]
+    print(i%6)
+    i+=1
+    c+=1
