@@ -1,0 +1,9 @@
+m=int(input("enter a number"))
+n=int(input("enter a number"))
+r=1
+while r!=0:
+
+    r=m%n
+    m=n
+    n=r
+print(m)
