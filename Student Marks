@@ -1,0 +1,17 @@
+student=[]
+marks=[]
+for i in range(5):
+    name=input("Enter name of the student{}".format(i+1))
+    student.append(name)
+    sum=0
+    for j in range(3):
+        mks=int(input("Enter mks of {} for sub {}".format(name,j+1)))
+        sum+=mks
+    perc=sum/30*100
+    marks.append(perc)
+    print()
+
+i=0
+for name in student:
+    print(name,":-",marks[i])
+    i+=1
