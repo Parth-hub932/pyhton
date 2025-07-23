@@ -1,0 +1,7 @@
+notorious=["darshan","anuj","rohit"]
+names=["anuj","darshan","rohit","jack","priya","bala","rai","ram","raj","ben"]
+score=[2,5,6,8,3,5,6,9,8,2]
+
+for name in names:
+    if name not in notorious and score[names.index(name)]>5:
+        print(name)
