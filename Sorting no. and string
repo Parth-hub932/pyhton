@@ -1,0 +1,21 @@
+a=[10,11,"zakir","bala",123,44,53,"anuj",7,"jack"]
+odd_num=[]
+even_num=[]
+names=[]
+
+for i in a:
+    if type(i)==int:
+        if i%2==0:
+            even_num.append(i)
+        else:
+            odd_num.append(i)
+    else:
+        names.append(i)
+
+even_num.sort()
+odd_num.sort()
+names.sort()
+
+print(odd_num)
+print(even_num)
+print(names)
