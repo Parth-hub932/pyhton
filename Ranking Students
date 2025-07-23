@@ -1,0 +1,16 @@
+students = [
+    {"name": "raju", "dept": "cse", "marks": [20, 30, 40]},
+    {"name": "vijay", "dept": "cse", "marks": [10, 70, 43]},
+    {"name": "pavi", "dept": "ece", "marks": [22, 38, 56]},
+    {"name": "rose", "dept": "ece", "marks": [26, 36, 89]},
+    {"name": "virat", "dept": "ece", "marks": [16, 90, 43]}
+]
+
+for student in students:
+    student["total"] = sum(student["marks"])
+
+students.sort(key=lambda x: x["total"], reverse=True)
+
+print("Rankings:")
+for rank, student in enumerate(students, start=1):
+    print(f"Rank {rank}: {student['name']} (Total: {student['total']})")
