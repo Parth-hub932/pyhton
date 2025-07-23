@@ -1,0 +1,53 @@
+import random
+
+name1=input("Enter player 1")
+name2=input("Enter player 2")
+
+print("Comp has fixed 5 nums in range of 1 to 10")
+print("you guys have to guss it")
+
+nums=[]
+while len(nums)!=6:
+    num=random.randint(1,10)
+    if num not in nums:
+        nums.append(num)
+
+num1=[]
+num2=[]
+s1=0
+s2=0
+for i in range(3):
+    print("--------ROUND{}----------".format(1+i))
+    print("dear {} guess ur choice".format(name1))
+    choice=int(input())
+    while choice in num1 or num2:
+        choice = int(input("Number is already taken"))
+
+    num1.append(choice)
+    if choice in nums:
+        s1+=1
+        print("correct")
+    else:
+        print("worng")
+
+    print("--------ROUND{}----------".format(1 + i))
+    print("dear {} guess ur choice".format(name2))
+    choice = int(input())
+    while choice in num1 or num2:
+        choice = int(input("Number is already taken"))
+
+
+    num2.append(choice)
+    if choice in nums:
+        s2 += 1
+        print("correct")
+    else:
+        print("worng")
+
+print("summary")
+print("Numbers were",nums)
+print("Player 1 choices are {} and score is {}".format(num1, s1))
+print("player 2 choices are {} and score is {}".format(num2, s2))
+
+if s1>s2:
+    print()
