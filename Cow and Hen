@@ -1,0 +1,12 @@
+head=int(input("Ente no of heads"))
+legs=int(input("Enter no of legs"))
+
+flag=False
+for hen in range(head):
+    cow=head-hen
+    if 4*cow+2*hen==legs:
+        print("cows=",cow,"hen=",hen)
+        flag=True
+        break
+if(flag==False):
+    print("No soln")
